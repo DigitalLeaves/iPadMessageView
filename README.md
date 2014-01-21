@@ -3,7 +3,7 @@ iPadMessageView
 
 iPadMessageView is a simple and elegant message view for iPad with Accept and/or Cancel prompt options, using blocks.
 
-The default view will present a semi-transparent dark background with a main title, a text message and optionally one or two buttons: "accept" or "cancel". iPadMessageView will use blocks for reacting to the user response to the prompt options, making it easier and more clear to use it in your code.
+The default view will present a semi-transparent dark background with a main title, a text message and optionally one or two buttons: "accept" or "cancel". iPadMessageView will use blocks for reacting to the user response to the prompt options, making it easier and more clear to use it in your code. 
 
 Integration
 ===========
@@ -24,7 +24,7 @@ self.messageView = [[iPadMessageView alloc] initWithMessage: message title: titl
     
 ```
 
-The type parameter determines if the dialog will prompt the user for an accept/cancel response (iPadMessageViewTypeAcceptOrCancel) or will only present an 'accept" button (iPadMessageViewTypeAcceptOnly).
+The type parameter determines if the dialog will prompt the user for an accept/cancel response (iPadMessageViewTypeAcceptOrCancel) or will only present an 'accept" button (iPadMessageViewTypeAcceptOnly). 
 
 Localization
 ============
@@ -37,16 +37,7 @@ iPadMessageView uses NSLocalizedString for presenting the Accept and Cancel butt
 Interface Orientation Changes
 =============================
 
-iPadMessageView registers itself for changes in orientation, and deregisters itself on being removed from the superview, so the proper way of managing iPadMessageView is to remove it from its superview properly and setting it to nil (i.e: whent the parent view's viewcontroller dissapears).
-
-```
-- (void) viewWillDissapear {
-  if (self.messageView) {
-    [self.messageView removeFromParent];
-    self.messageView = nil;
-  }
-}
-```
+iPadMessageView registers itself for changes in orientation, and deregisters itself on being removed from the superview. The view will remove itself from its superview after returning with the responseBlock.
 
 License
 =======
