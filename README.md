@@ -31,8 +31,10 @@ Localization
 
 iPadMessageView uses NSLocalizedString for presenting the Accept and Cancel buttons, so if you want to localize the view you just have to add in your localized.strings the following terms:
 
+```
 "Accept" = "...";
 "Cancel" = "...";
+```
 
 Interface Orientation Changes
 =============================
