@@ -139,12 +139,12 @@
 #pragma mark button actions
 
 - (IBAction) acceptButtonTouched: (id) sender {
-    self.responseBlock(iPadMessageViewResponseAccept);
+    if (self.responseBlock) self.responseBlock(iPadMessageViewResponseAccept);
     [self removeFromSuperview];
 }
 
 - (IBAction) cancelButtonTouched: (id) sender {
-    self.responseBlock(iPadMessageViewResponseCancel);
+    if (self.responseBlock) self.responseBlock(iPadMessageViewResponseCancel);
     [self removeFromSuperview];
 }
 

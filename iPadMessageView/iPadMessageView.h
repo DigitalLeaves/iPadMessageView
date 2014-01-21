@@ -12,7 +12,7 @@ typedef enum {
     iPadMessageViewResponseCancel,
 } iPadMessageViewResponse;
 
-/** 
+/**
  * iPadMessageViewTypeAcceptOrCancel: will generate a view with accept or cancel buttons. First one will cause an iPadMessageViewResponseAccept, whereas the cancel button will cause an iPadMessageViewResponseCancel.
  * iPadMessageViewTypeAcceptOnly: Will create a view with an accept button only that, when pushed, will cause an iPadMessageViewResponseAccept response.
  */
@@ -59,7 +59,7 @@ typedef void (^ResponseBlock) (iPadMessageViewResponse response);
  * @param message the message to display at the view, will be shown in a smaller font below the title.
  * @param orientation the orientation of the view to create: iPadMessageViewOrientationLandscape or iPadMessageViewOrientationPortrait
  * @param responseBlock a block that will be invoked when the user clicks any of the view's buttons. The response will be sent as the response parameter.
-*/
+ */
 - (id) initWithMessage: (NSString *) message title: (NSString *) title type: (iPadMessageViewType) type andResponseBlock: (ResponseBlock) responseBlock;
 
 /** Convenience method for creating a message view prompting the user for accept/cancel options */
