@@ -5,7 +5,7 @@ iPadMessageView is a simple and elegant message view for iPad with Accept and/or
 
 The default view will present a semi-transparent dark background with a main title, a text message and optionally one or two buttons: "accept" or "cancel". iPadMessageView will use blocks for reacting to the user response to the prompt options, making it easier and more clear to use it in your code. 
 
-![](http://digitalleaves.com/blog/wp-content/uploads/2014/01/iPadMessageView.jpg)
+![](http://digitalleaves.com/wp-content/uploads/2014/01/iPadMessageView.jpg)
 
 Integration
 ===========
